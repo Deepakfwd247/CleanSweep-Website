@@ -64,9 +64,28 @@
         .folder-icon { color: var(--primary); font-size: 80px; display: flex; }
         .pulse-ring { position: absolute; width: 100%; height: 100%; border: 1px solid rgba(var(--primary-rgb), 0.1); border-radius: 9999px; animation: pulse 2s infinite; }
         
-        .cta-section { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 40px; }
-        .btn-start-scan { display: flex; align-items: center; gap: 12px; background-color: var(--primary); color: var(--bg-dark); padding: 16px 32px; border-radius: 12px; font-weight: 700; font-size: 1.125rem; transition: transform 0.2s; }
-        .btn-start-scan:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(71, 244, 37, 0.4); }
+        /* CTA Section Styles */
+        .cta-section { display: flex; flex-direction: column; align-items: center; gap: 16px; margin-bottom: 40px; width: 100%; }
+        
+        /* Button Styles */
+        .btn-primary-lg { 
+            width: 100%; 
+            display: flex; 
+            min-width: 240px; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 12px; 
+            border-radius: 12px; 
+            height: 56px; 
+            padding: 0 32px; 
+            background-color: var(--primary); 
+            color: var(--bg-dark); 
+            font-size: 1.125rem; 
+            font-weight: 700; 
+            transition: all 0.2s; 
+        }
+        .btn-primary-lg:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(71, 244, 37, 0.4); }
+        .neon-glow { box-shadow: 0 0 20px rgba(71, 244, 37, 0.3); }
 
         @keyframes pulse { 50% { opacity: .5; transform: scale(1.05); } }
 
@@ -77,6 +96,7 @@
             .mobile-menu-btn { display: none; }
             .main-title { font-size: 3.5rem; }
             .folder-icon { font-size: 120px; }
+            .btn-primary-lg { width: auto; } /* Button isn't full width on desktop */
         }
         @media (min-width: 1024px) { 
             .steps-layout { flex-direction: row; align-items: center; } 
@@ -97,7 +117,7 @@
                     <a class="nav-link" href="how-it-works.html">How It Works</a>
                     <a class="nav-link" href="pricing.html">Pricing</a>
                 </nav>
-                <a href="#">
+                <a href="https://release-assets.githubusercontent.com/github-production-release-asset/1136408260/3aa507a5-666d-4f99-be37-ad69824cced4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-01-20T09%3A39%3A32Z&rscd=attachment%3B+filename%3DCleanSweep-1.0.0.Setup.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-01-20T08%3A38%3A46Z&ske=2026-01-20T09%3A39%3A32Z&sks=b&skv=2018-11-09&sig=ChkeQt26SaTmY8ucMu7gz%2FSZ5rJ7XdoZjix7Tb8Wr10%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc2ODkwMTkyNiwibmJmIjoxNzY4ODk4MzI2LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.7nNJT8aVANtMiM_u4XrAkGcOVJuwWCVl83_mjqRMggE&response-content-disposition=attachment%3B%20filename%3DCleanSweep-1.0.0.Setup.exe&response-content-type=application%2Foctet-stream">
                     <button class="btn-nav">Download Now</button>
                 </a>
             </div>
@@ -151,8 +171,9 @@
             </div>
 
             <div class="cta-section">
-                <a href="pricing.html"> <button class="btn-primary-lg neon-glow">
-                     Start Free Scan
+                <a href="pricing.html" style="text-decoration: none; display: flex; justify-content: center; width: auto;">
+                    <button class="btn-primary-lg neon-glow">
+                        Start Free Scan
                     </button>
                 </a>
                 <p style="color: #94a3b8; font-size: 0.8rem;">Compatible with Windows 10/11 & macOS</p>
